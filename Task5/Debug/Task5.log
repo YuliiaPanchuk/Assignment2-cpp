@@ -1,0 +1,4 @@
+﻿  Task5.cpp
+C:\Users\Lenovo\Documents\GitHub\cpp-assignments\Assignment2\Task5\Task5.cpp(14,6): warning C4101: 'y': unreferenced local variable
+C:\Users\Lenovo\Documents\GitHub\cpp-assignments\Assignment2\Task5\Task5.cpp(15,6): warning C4101: 'x': unreferenced local variable
+  Task5.vcxproj -> C:\Users\Lenovo\Documents\GitHub\cpp-assignments\Assignment2\Debug\Task5.exe

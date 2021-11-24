@@ -1,20 +1,30 @@
-// Task4.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+﻿// Preprocessor directives
 #include <iostream>
+#include <iomanip> // setw()
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int start = 1;
+	int end = 15;
+	int value1 = 10;
+	int value2 = 100;
+	int value3 = 1000;
+
+
+	// Read input
+	system("CLS");
+	cout << "Multiplication table" << endl;
+	cout << "====================" << endl << endl;
+
+	// Title (special chars in console)
+	cout << setw(5) << "n" << setw(10) << "10*n" << setw(10) << "100*n" << setw(10) << "1000*n" << setw(10) << endl
+		<< "===================================" << endl;
+
+	// The table
+	for (int n = start; n <= end; ++n)
+	{
+		cout << setw(4) << n << setw(10) << value1 * n 
+			<< setw(10) << value2 * n << setw(10) << value3 * n << endl;
+	}
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

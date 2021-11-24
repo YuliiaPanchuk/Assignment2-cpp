@@ -1,17 +1,28 @@
 // Preprocessor directives
 #include <iomanip>
 #include <iostream>
-using namespace std;int main(){	// Define and initialize variables
-	int start = 1;
-	int end = 15;
-	int calcOdds;
+using namespace std;
 
-	for (int start = 0; start < end; start++)
-	{
+int main()
+{
+	// Define and initialize variables
+	int num;
+	int calcOdds = 1;
 
-	}
-	
 	// Read input
 	system("CLS");
 	cout << "The product of odd integers" << endl;
-	cout << "============" << endl << endl;	// Calculation	// Display result	cout << "The product of all odd integers between " 		<< start << " and " << end << " is " 		<< calcOdds << endl;}
+	cout << "============" << endl << endl;
+
+	for (num = 1; num <= 15; num += 2)
+	{
+		if ((num % 2) != 0)
+		{
+			calcOdds += calcOdds * num;
+		}
+	}
+
+	// Display result
+	cout << "The product of all odd integers between 1 and 15 is  " << calcOdds << endl;
+		return 0;	
+}
