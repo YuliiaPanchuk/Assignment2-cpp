@@ -1,20 +1,46 @@
-// Task7.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include <iostream> //cin cout endl
+#include <iomanip>
+using namespace std;
 
-#include <iostream>
+//Prototypes
+void calculation();
+void input();
+
+// Define variables
+double nr1; 
+double nr2;
+double nr3; 
+double nr4;
+double nr5;
+double nr6;
+double nr7;
+double nr8; 
+double nr9;
+double sum;
+double averageNum = 0;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	char answer;
+	do
+	{
+		calculation();
+		cout << "One more time (Y/N) ?";
+		cin >> answer;
+	} while (answer == 'Y' || answer == 'y');
+	return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+void calculation()
+{
+	sum = nr1 + nr2 + nr3 + nr4 + nr5 + nr6 + nr7 + nr8 + nr9;
+	averageNum = sum / 9;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	// Printing result
+	cout << "Judges figures: " << nr1 << nr2 << nr3 << nr4 << nr5 << nr6 << nr7 << nr8 << nr9;
+}
+
+void input()
+{
+
+}

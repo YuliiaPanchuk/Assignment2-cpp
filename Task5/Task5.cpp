@@ -1,24 +1,29 @@
 // Preprocessor directives
 #include <iostream>
-#include <iomanip> // setw()
 using namespace std;
 
-/* cout << "* ";
+/* Allowed to print:
+cout << "* ";
 cout << " ";
 cout << endl;
 */
 
 int main()
 {
-	// Declare variables
-	int y;
-	int x;
 
 	for (int y = 0; y <= 8; y++)
 	{
-		for (int x = 0; x <= 8; x++)
+		for (int x = 0; x <= 16; x++)
 		{
-			cout << "*" << endl;
+			if ((x + y) % 2 == 0)
+			{
+				cout << "*";
+			}
+			else
+			{
+				cout << " ";			
+			}
 		}
+		cout << endl;
 	}
 }
