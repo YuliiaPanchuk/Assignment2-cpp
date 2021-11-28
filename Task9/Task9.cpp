@@ -1,20 +1,56 @@
-// Task9.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Preprocessor directives
+#include <iostream> //cin cout endl
+#include <iomanip> //setw fixed setprecision
+using namespace std;
 
-#include <iostream>
+//Prototypes
+void summ();
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	char answer;
+	do
+	{
+		summ();
+		cout << "One more time (Y/N) ?";
+		cin >> answer;
+	} while (answer == 'Y' || answer == 'y');
+	return 0;
 }
+void summ()
+{
+	// Define and initialize variables
+	double tmpInput;
+	int input;
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+	int nr1, nr2, nr3;
+	int sum = 0;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	// Read the values from user
+	system("CLS"); // Clear screen
+	cout << "Sum of number" << endl;
+	cout << "==========" << endl << endl;
+
+	// To be able to test that number is not too large, it can be assigned to a double - variable.
+	do
+	{
+		cout << "Write your number : ";
+		cin >> tmpInput;
+		// Before the number is transferred to an integer value, test if the variable - value is between 0
+		// and INT_MAX(inclusive); if not, redo the input operation.
+	} while (!(tmpInput > 0 && tmpInput < INT_MAX));
+	
+	// transferred to an integer value
+	input = tmpInput;
+
+	// Calculate sum, average and product
+	nr1 = (input % 1000) / 100;
+	nr2 = (input % 100) / 10;
+	nr3 = input % 10;
+
+	sum = nr1 + nr2 + nr3;
+
+	// Display results
+	cout << fixed << showpoint; // Decimal form, display trailing zeroes
+	cout << "Sum is : " << sum << endl;
+}
